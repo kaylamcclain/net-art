@@ -1,16 +1,28 @@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my favorites</title>
-    <link rel="stylesheet" href="styles.css">
-     <style>
-         body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: greenyellow;
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .nav-image {
+
+        body {
+            background: linear-gradient(to bottom, #7ED321 0%, #6BC91E 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+         .nav-image {
             position: fixed;
             top: 20px;
             right: 20px;
@@ -20,12 +32,12 @@
             z-index: 1000;
             transition: all 0.3s ease;
         }
-
+        
         .nav-image:hover {
             transform: scale(1.1);
             opacity: 0.8;
         }
-
+        
         .nav-image img {
             width: 100%;
             height: 100%;
@@ -33,12 +45,81 @@
             border-radius: 0px;
             transform: rotate(45deg);
         }
-     </style>
+
+        .title {
+            font-size: 64px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            margin-bottom: 100px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 120px;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .image-link {
+            display: block;
+            transition: all 0.4s ease;
+        }
+
+        .image-link img {
+            width: 300px;
+            height: auto;
+            display: block;
+            transition: all 0.4s ease;
+        }
+
+        .image-link:hover {
+            transform: scale(1.2);
+        }
+
+        .image-link:hover img {
+            filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8))
+                    drop-shadow(0 0 60px rgba(255, 255, 255, 0.6))
+                    drop-shadow(0 0 90px rgba(255, 255, 255, 0.4));
+        }
+
+        .decorative-element {
+            position: absolute;
+            top: 100px;
+            right: 150px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .decorative-element img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
-    <p>these are my favs from him</p>
-    <a href="index.html" class="nav-image">
-        <img src="images/purple nav.jpg">
+    <div class="title">enter a portal</div>
+
+    <div class="image-container">
+        <a href="fav 1.html" class="image-link" target="_blank">
+            <img src="images/green beige.png" alt="Image 1">
+        </a>
+        
+        <a href="fav 2.html" class="image-link" target="_blank">
+            <img src="images/pink and green blob.png" alt="Image 2">
+        </a>
+        
+        <a href="fav 3.html" class="image-link" target="_blank">
+            <img src="images/neon green.png" alt="Image 3">
+        </a>
+    </div>
+     <a href="index.html" class="nav-image">
+        <img src="images/multi nav.jpg" alt="Navigation">
     </a>
 </body>
 </html>

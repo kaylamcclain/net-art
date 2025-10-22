@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Are Now Entering the Emulation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #C71585;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Top right decorative image */
+        .top-right-image {
+            position: absolute;
+            top: 40px;
+            right: 80px;
+            width: 120px;
+            height: 120px;
+            transform: rotate(15deg);
+        }
+
+        .top-right-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Left side numbered boxes */
+        .numbered-boxes {
+            position: absolute;
+            left: 80px;
+            top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .box {
+            width: 180px;
+            height: 180px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .box-number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 72px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Center text content */
+        .text-container {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-20%);
+            text-align: left;
+        }
+
+        .text-you {
+            font-size: 64px;
+            color: white;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .text-are-now {
+            font-size: 64px;
+            color: white;
+            font-weight: 300;
+            margin-bottom: 20px;
+            margin-left: 120px;
+        }
+
+        .text-entering {
+            font-size: 64px;
+            color: white;
+            font-weight: 300;
+            margin-bottom: 20px;
+            margin-left: 240px;
+        }
+
+        .text-the {
+            font-size: 48px;
+            color: white;
+            font-weight: 300;
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .text-emulation {
+            font-size: 96px;
+            color: white;
+            font-weight: bold;
+            display: inline;
+        }
+
+        .emulation-line {
+            margin-left: 360px;
+            margin-top: 40px;
+        }
+
+        /* Bottom left image (hands on keyboard) */
+        .bottom-left-image {
+            position: absolute;
+            bottom: -50px;
+            right: 0;
+            width: 600px;
+            height: auto;
+        }
+
+        .bottom-left-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay-image {
+            position: absolute;
+            bottom: 1px;
+            left: 55%;
+            transform: translateX(-30%);
+            width: 400px;
+            height: auto;
+            opacity: 0.7;
+            z-index: 1;
+        }
+
+        .overlay-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+  
+        .computer-image {
+            position: absolute;
+            bottom: 1px;
+            right: 1px;
+            width: 600px;
+            height: auto;
+            z-index: 2;
+        }
+
+        .computer-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .nav-image {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-image:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .nav-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0px;
+            transform: rotate(45deg);
+        }
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .numbered-boxes {
+                left: 20px;
+                top: 20px;
+                gap: 20px;
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+            }
+
+            .box-number {
+                font-size: 48px;
+            }
+
+            .text-container {
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            .text-you,
+            .text-are-now,
+            .text-entering {
+                font-size: 36px;
+                margin-left: 0;
+            }
+
+            .text-the {
+                font-size: 28px;
+            }
+
+            .text-emulation {
+                font-size: 48px;
+            }
+
+            .emulation-line {
+                margin-left: 0;
+            }
+
+            .top-right-image {
+                width: 80px;
+                height: 80px;
+                right: 20px;
+            }
+
+            .bottom-left-image {
+                width: 300px;
+            }
+
+            .computer-image {
+                width: 250px;
+                right: 50px;
+            }
+
+            .overlay-image {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- Left side numbered boxes -->
+    <div class="numbered-boxes" style="padding-top: 150px;">
+    <div class="box">
+        <a href="https://harm.work/medium/sculptures">
+            <img src="images/pink box.png" alt="Pink Box">
+            <div class="box-number">1</div>
+        </a>
+    </div>
+    <div class="box">
+        <a href="https://harm.work/medium/websites">
+            <img src="images/multi box.png" alt="Multi Box">
+            <div class="box-number">2</div>
+        </a>
+    </div>
+    <div class="box">
+        <a href="https://harm.work/nft">
+            <img src="images/blue purp box.png" alt="Blue Purple Box">
+            <div class="box-number">3</div>
+        </a>
+    </div>
+</div>
+
+    <!-- Center text content -->
+    <div class="text-container">
+        <div class="text-you">you</div>
+        <div class="text-are-now">are now</div>
+        <div class="text-entering">entering</div>
+        <div class="emulation-line">
+            <span class="text-the">the</span>
+            <span class="text-emulation">emulation</span>
+        </div>
+    </div>
+
+    <!-- Transparent overlapping figure -->
+    <div class="overlay-image">
+        <img src="images/lace flower.png">
+    </div>
+
+    <!-- Computer/monitor image -->
+    <div class="computer-image">
+        <img src="images/computer.png">
+    </div>
+    <a href="index.html" class="nav-image">
+        <img src="images/purple nav.jpg">
+    </a>
+</body>
+</html>

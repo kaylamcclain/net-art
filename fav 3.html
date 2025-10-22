@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blush Array II - Mutant Garden</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #1fec26 0%, #44f026 100%);
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            padding: 60px 80px;
+            position: relative;
+        }
+         .nav-image {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-image:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+        
+        .nav-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0px;
+            transform: rotate(45deg);
+        }
+
+        .decorative-element {
+            position: absolute;
+            top: 100px;
+            right: 120px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .decorative-element img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.9;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 60px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .text-section {
+            flex: 1;
+            max-width: 650px;
+        }
+
+        .title {
+            font-size: 52px;
+            font-weight: bold;
+            color: #0611e6;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+
+        .description {
+            list-style-type: disc;
+            padding-left: 25px;
+            color: #3a05a3;
+        }
+
+        .description li {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .description a {
+            color: #0e03a7;
+            text-decoration: underline;
+        }
+
+        .image-section {
+            flex: 0 0 auto;
+            align-self: flex-end;
+        }
+
+        .image-link {
+            display: block;
+            transition: all 0.4s ease;
+        }
+
+        .image-link img {
+            width: 550px;
+            height: auto;
+            display: block;
+            transition: all 0.4s ease;
+        }
+
+        .image-link:hover {
+            transform: scale(1.15);
+        }
+
+        .image-link:hover img {
+            filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.9))
+                    drop-shadow(0 0 80px rgba(255, 255, 255, 0.7))
+                    drop-shadow(0 0 120px rgba(255, 255, 255, 0.5));
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-container">
+        <div class="text-section">
+            <h1 class="title">breezy doozy</h1>
+            
+            <ul class="description">
+                <li>NFT, 2022, drawing brought to life with digital art...
+this work is a 2022 reimagining of a previously unreleased composite drawing that Harm made in 2012. At the time, he was investigating the Deviant Art community as an outsider, somewhat as a visual anthropologist. 
+</a></li>
+                
+                <li>the image is animated with a wavy SVG filter, and it responds to your operating system's settings for 'light' or 'dark' mode appearance.</li>
+                
+                <li>the work sits at the intersection of post-internet and blockchain art practices: it references early online community aesthetics while being minted and circulated as an NFT, so it both memorializes and recontextualizes internet subcultures for collectors. it’s an example of how contemporary artists translate hand drawing into emergent, responsive digital objects - a move typical of post-internet and generative art currents.
+</li>
+            </ul>
+        </div>
+
+        <div class="image-section">
+            <a href="favorites.html" class="image-link" target="_blank">
+                <img src="images/drawing.png">
+            </a>
+        </div>
+    </div>
+       <a href="index.html" class="nav-image">
+        <img src="images/pink nav.webp" alt="Navigation">
+    </a>
+</body>
+</html>

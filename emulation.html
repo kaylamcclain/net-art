@@ -1,15 +1,87 @@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>emulation of work</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Emulation of Work</title>
     <style>
-         body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: rgb(203, 0, 203);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            background-color: #C71585;
+            font-family: Arial, sans-serif;
+            min-height: 80vh;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            position: relative;
+            min-height: 50vh;
+        }
+
+        .main-title {
+            font-size: 72px;
+            color: white;
+            font-style: italic;
+            font-weight: 300;
+            text-align: right;
+            margin-bottom: 60px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .main-title:hover {
+            font-size: 80px;
+            color: #00FFFF;
+            text-shadow: 0 0 20px #00FFFF, 0 0 40px #00FFFF;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .image-container {
+            flex-shrink: 0;
+            cursor: pointer;
+            margin-top: -50px; 
+            margin-left: 10px; 
+        }
+
+        .image-container img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.2s ease;
+            display: block;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.15);
+        }
+
+        .placeholder-text {
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .description-text {
+            color: white;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 40px;
+            max-width: 600px;
+        }
+
         .nav-image {
             position: fixed;
             top: 20px;
@@ -33,12 +105,127 @@
             border-radius: 0px;
             transform: rotate(45deg);
         }
-     </style>
+
+        .subtitle-text {
+            color: white;
+            font-size: 24px;
+            text-align: right;
+            margin-top: 10px;  /* Negative = closer to title, Positive = further away */
+            margin-bottom: 800px;
+            margin-right: 0px;  /* CHANGE THIS - smaller number moves it RIGHT */
+            margin-left: auto;  /* ADD THIS - helps push it to the right */
+            width: 550px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                padding-top: 60px;
+            }
+
+            .main-title {
+                font-size: 40px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .main-title:hover {
+                font-size: 44px;
+            }
+
+            .content-wrapper {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .image-container {
+                margin-top: 0;
+                margin-left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .image-container img {
+                width: 280px;
+                height: 280px;
+            }
+
+            .subtitle-text {
+                text-align: center;
+                margin: 0 auto;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                width: 90%;
+                max-width: 350px;
+                font-size: 20px;
+                line-height: 1.5;
+            }
+
+            .description-text {
+                font-size: 16px;
+                text-align: center;
+                max-width: 100%;
+                padding-top: 60px;
+            }
+
+            .nav-image {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .main-title {
+                font-size: 36px;
+            }
+
+            .main-title:hover {
+                font-size: 40px;
+            }
+
+            .image-container img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .subtitle-text {
+                font-size: 18px;
+            }
+
+            .description-text {
+                font-size: 14px;
+                padding-top: 40px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>emulation of work from harm van den dorpel</p>
-     <a href="index.html" class="nav-image">
-        <img src="images/blue nav.png">
+    <a href="index.html" class="nav-image">
+        <img src="images/blue nav.png" alt="Navigation">
     </a>
+
+    <div class="container" style="padding-top: 100px;">
+        <h1 class="main-title">emulation of work</h1>
+        
+        <div class="content-wrapper">
+            <div class="image-container">
+             <a href="emulation page 2.html">
+            <img src="images/blue man.png" alt="Your image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            </a>
+            <div class="placeholder-text" style="display: none;">
+     </div>
+</div>
+            </div>
+            <div class="subtitle-text">
+    from this checkpoint, you will discover a brief emulation of harm van dorpel's work. there is more than what meets the eye in terms of his oeuvre, but this will take to some specific selections. 
+</div>
+        </div>
+
 </body>
 </html>

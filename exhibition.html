@@ -1,18 +1,26 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exhibitions of artwork</title>
     <link rel="stylesheet" href="styles.css">
-     <style>
-         body {
+    
+    <style>
+        body {
             font-family: Arial, sans-serif;
             padding: 20px;
             background-image: url(images/pixel\ city.gif);
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+        
         .nav-image {
             position: fixed;
             top: 20px;
@@ -23,12 +31,12 @@
             z-index: 1000;
             transition: all 0.3s ease;
         }
-
+        
         .nav-image:hover {
             transform: scale(1.1);
             opacity: 0.8;
         }
-
+        
         .nav-image img {
             width: 100%;
             height: 100%;
@@ -36,12 +44,39 @@
             border-radius: 0px;
             transform: rotate(45deg);
         }
-     </style>
+        
+        .center-text {
+            text-align: center;
+            z-index: 10;
+        }
+        
+        .center-text a {
+            display: block;
+            font-size: 48px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            margin: 20px 0;
+            font-weight: 300;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .center-text a:hover {
+            opacity: 0.7;
+            transform: translateX(10px);
+            color: rgb(176, 10, 151);
+        }
+    </style>
 </head>
 <body>
     <a href="index.html" class="nav-image">
-        <img src="images/green nav.jpg">
+        <img src="images/green nav.jpg" alt="Navigation">
     </a>
-    <div></div>
+    
+    <div class="center-text">
+        <a href="https://harm.work/exhibition/our-inner-child" target="_blank">our inner child</a>
+        <a href="https://harm.work/exhibition/systems-of-belief" target="_blank">systems of belief</a>
+        <a href="https://harm.work/exhibition/mutant-garden" target="_blank">mutant garden</a>
+    </div>
 </body>
 </html>
