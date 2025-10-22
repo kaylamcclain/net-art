@@ -1,16 +1,24 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>citations</title>
-    <link rel="stylesheet" href="styles.css">
-     <style>
-         body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            background-color: greenyellow;
+    <title>Research Citations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .nav-image {
+
+        body {
+            background: linear-gradient(to bottom, #C77DFF 0%, #E0AAFF 100%);
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            padding: 80px 100px;
+            position: relative;
+        }
+          .nav-image {
             position: fixed;
             top: 20px;
             right: 20px;
@@ -20,12 +28,12 @@
             z-index: 1000;
             transition: all 0.3s ease;
         }
-
+        
         .nav-image:hover {
             transform: scale(1.1);
             opacity: 0.8;
         }
-
+        
         .nav-image img {
             width: 100%;
             height: 100%;
@@ -33,12 +41,105 @@
             border-radius: 0px;
             transform: rotate(45deg);
         }
-     </style>
+
+
+        .decorative-element {
+            position: absolute;
+            top: 100px;
+            right: 150px;
+            width: 80px;
+            height: 80px;
+        }
+
+        .decorative-element img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0.9;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: normal;
+            color: #440139;
+            margin-bottom: 50px;
+            line-height: 1.4;
+        }
+
+        .citations {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .citation {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .citation:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8))
+                    drop-shadow(0 0 25px rgba(255, 255, 255, 0.6));
+        }
+
+        .citation a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        /* Alternating colors - blue and yellow/green */
+        .citation:nth-child(odd) {
+            color: #5B6FFF;
+        }
+
+        .citation:nth-child(even) {
+            color: #CCFF00;
+        }
+    </style>
 </head>
 <body>
-    <p>mla citations</p>
-    <a href="index.html" class="nav-image">
-        <img src="images/purple nav.jpg">
+    <div class="content">
+        <h1 class="title" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">you have reached the end! here's some proof of my research:</h1>
+
+        <div class="citations">
+            <p class="citation">Anthology Rhizome. "Death Imitates Language." Net Art Anthology, 2016–ongoing, anthology.rhizome.org/death-imitates-language. Accessed 21 Oct. 2025. <a href="https://anthology.rhizome.org/death-imitates-language?utm_source=chatgpt.com">NET ART ANTHOLOGY</a></p>
+
+            <p class="citation">Harm van den Dorpel. "Artist Bio." Harm . Work, harm.work/writing/artist-bio. Accessed 21 Oct. 2025. <a href="https://harm.work/writing/artist-bio">Harm van den Dorpel</a></p>
+
+            <p class="citation">Harm van den Dorpel. "Blush Array II." Harm . Work, <a href="https://harm.work/nft/struggle-for-pleasure/1191407332."></a> Accessed 21 Oct. 2025.<br>
+            Harm van den Dorpel. "Struggle for Pleasure." Harm . Work, Accessed 21 Oct. 2025.</p>
+
+            <p class="citation">Harm van den Dorpel. "Artist Page." Upstream Gallery, www.upstreamgallery.nl/artists/45/harm-van-den-dorpel. Accessed 21 Oct. 2025. <a href="https://www.upstreamgallery.nl/artists/45/harm-van-den-dorpel">upstreamgallery.nl</a></p>
+
+            <p class="citation">Harm van den Dorpel. "Mutant Garden." Upstream Gallery, <a href="https://www.upstreamgallery.nl/exhibitions/198/mutant-garden">mutant garden</a> Accessed 21 Oct. 2025.</p>
+
+            <p class="citation">Harm van den Dorpel. "In Conversation with Niio Epstein and Leyla Fakhr." Verse Works, Accessed 21 Oct. 2025. <a href="https://verse.works/journal/twitter-spaces-harm-van-den-dorpel-in-conversation-with-nico-epstein-and-leyla-fakhr?utm_source=chatgpt.com">Verse</a></p>
+
+            <p class="citation">Harm van den Dorpel. "Software Editions #1139." Harm . Work, <a href="https://www.upstreamgallery.nl/exhibitions/264/quantizer">software editions</a> Accessed 21 Oct. 2025.</p>
+
+            <p class="citation">Narrative Projects. "Harm van den Dorpel." Narrative Projects, narrativeprojects.com/artists/harm-van-den-dorpel. Accessed 21 Oct. 2025. <a href="https://narrativeprojects.com/artists/harm-van-den-dorpel/?utm_source=chatgpt.com">narrativeprojects.com</a></p>
+
+            <p class="citation">PROOF. "Browse Collections." PROOF, proof.xyz/collections. Accessed 21 Oct. 2025. <a href="https://www.proof.xyz/collections">PROOF</a></p>
+
+            <p class="citation">PROOF. "Grails Season 2." PROOF, proof.xyz/grails/season-2/breezy-doggy. Accessed 21 Oct. 2025. <a href="https://www.proof.xyz/grails/season-2?utm_source=chatgpt.com">PROOF</a></p>
+
+            <p class="citation">Verse Works. "Exhibition: Struggle for Pleasure." Verse Works, verse.works/exhibitions/struggle-for-pleasure. Accessed 21 Oct. 2025. <a href="https://verse.works/exhibitions/struggle-for-pleasure?utm_source=chatgpt.com">Verse</a></p>
+
+            <p class="citation">Kadist. "Mutant Garden: Autobreeder." Kadist, <a href="https://kadist.org/work/mutant-garden-autobreeder/">kadist</a>Accessed 21 Oct. 2025.</p>
+        </div>
+    </div>
+     <a href="index.html" class="nav-image">
+        <img src="images/multi nav.jpg" alt="Navigation">
     </a>
 </body>
 </html>
