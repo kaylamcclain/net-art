@@ -51,6 +51,78 @@
             border-radius: 0px;
             transform: rotate(45deg);
         }
+        @media (max-width: 430px) {
+    body {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        height: 100vh;
+    }
+
+    /* Navigation links block stacked at top center */
+    .right-section {
+        position: relative;
+        padding: 40px 0 0 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    .right-section p {
+        margin: 6px 0;
+    }
+
+    /* Bottom name stays aligned bottom-right visually */
+    .bottom-right-text {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        text-align: right;
+    }
+
+    .artist-name {
+        font-size: 26px;
+        line-height: 1.2;
+        color: #8300cf;
+    }
+
+    /* Navigation image repositioned smaller in corner */
+    .nav-image {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-image img {
+        transform: rotate(45deg);
+    }
+
+    /* Keep background image visible and centered */
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-image: url(images/intro\ background.png);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.9;
+        z-index: -1;
+    }
+}
     </style>
 </head>
 <body style="padding-left: 810px">
